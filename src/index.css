@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+@import "tailwindcss";
+
+/* @group Configuration : Design system tokens */
+:root {
+  /* Surfaces */
+  --bg-app:        #060810;
+  --bg-surface:    #0a0d18;
+  --bg-card:       #0d1020;
+  --bg-input:      #0b0e1c;
+  --bg-hover:      rgba(255, 255, 255, 0.028);
+  --bg-active:     rgba(124, 92, 252, 0.09);
+
+  /* Borders */
+  --border:        rgba(255, 255, 255, 0.065);
+  --border-hover:  rgba(255, 255, 255, 0.10);
+  --border-accent: rgba(124, 92, 252, 0.32);
+
+  /* Accent — electric violet */
+  --accent:        #7c5cfc;
+  --accent-text:   #a78bfa;
+  --accent-dim:    rgba(124, 92, 252, 0.10);
+  --accent-glow:   rgba(124, 92, 252, 0.20);
+
+  /* Status colours */
+  --green:         #10b981;
+  --green-dim:     rgba(16, 185, 129, 0.10);
+  --green-border:  rgba(16, 185, 129, 0.25);
+
+  --red:           #f43f5e;
+  --red-dim:       rgba(244, 63, 94, 0.09);
+  --red-border:    rgba(244, 63, 94, 0.25);
+
+  --amber:         #f59e0b;
+  --amber-dim:     rgba(245, 158, 11, 0.09);
+  --amber-border:  rgba(245, 158, 11, 0.25);
+
+  --cyan:          #22d3ee;
+  --cyan-dim:      rgba(34, 211, 238, 0.09);
+
+  /* Text */
+  --text-1:  #dde4f0;
+  --text-2:  #7f8ea8;
+  --text-3:  #3d4f68;
+  --text-4:  #1e2a38;
+
+  /* Typography */
+  font-family: "IBM Plex Sans", "Outfit", "Segoe UI", system-ui, sans-serif;
+  font-size: 12px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* @group Configuration : Base reset */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background: var(--bg-app);
+  color: var(--text-1);
+  overflow: hidden;
+}
+
+/* @group Utilities : Selection */
+::selection {
+  background: var(--accent-glow);
+  color: var(--text-1);
+}
+
+/* @group Utilities : Focus ring */
+:focus-visible {
+  outline: 1.5px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 5px;
+}
+
+/* @group Utilities : Scrollbar */
+::-webkit-scrollbar { width: 3px; height: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--border-accent);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+::-webkit-scrollbar-corner { background: transparent; }
+
+/* @group Utilities : Mono font helper */
+.mono { font-family: "JetBrains Mono", "Cascadia Code", monospace; }
+
+/* @group Utilities : Card surface */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+/* @group Utilities : Input base */
+.field {
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  color: var(--text-1);
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 12px;
+  padding: 6px 10px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.field:focus { border-color: var(--accent); }
+.field::placeholder { color: var(--text-3); }
+
+/* @group Utilities : Button base variants */
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 6px 14px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+}
+.btn-primary:hover { opacity: 0.88; }
+.btn-primary:active { transform: scale(0.98); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-2);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 6px 12px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.btn-ghost:hover {
+  background: var(--bg-hover);
+  color: var(--text-1);
+  border-color: var(--border-hover);
+}
+
+/* @group Utilities : Table */
+.data-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.data-table th {
+  padding: 8px 14px;
+  text-align: left;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+  user-select: none;
+}
+.data-table td {
+  padding: 7px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.025);
+  color: var(--text-2);
+}
+.data-table tbody tr:hover td { background: var(--bg-hover); }
+.data-table tbody tr:last-child td { border-bottom: none; }
+
+/* @group Utilities : Empty state */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 48px 20px;
+  color: var(--text-3);
+  text-align: center;
+}
+.empty-state svg { opacity: 0.20; margin-bottom: 4px; }
+
+/* @group Utilities : Skeleton shimmer */
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position:  400px 0; }
+}
+.skel {
+  border-radius: 5px;
+  background: linear-gradient(
+    90deg,
+    var(--bg-hover) 25%,
+    var(--border)   50%,
+    var(--bg-hover) 75%
+  );
+  background-size: 400px 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+
+/* @group Utilities : Top loading bar */
+@keyframes load-bar {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+.load-bar {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 50;
+}
+.load-bar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  animation: load-bar 1.2s ease-in-out infinite;
+}
+
+/* @group Utilities : Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 1px 7px;
+  border-radius: 99px;
+  font-size: 10px;
+  font-weight: 500;
+  border: 1px solid transparent;
+}
