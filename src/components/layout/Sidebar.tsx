@@ -4,6 +4,7 @@ import {
   Server, Activity, Cpu, FolderOpen, Terminal,
   Network, Archive, Layers, Globe, Settings, Menu,
 } from "lucide-react";
+import { DistrodLogo } from "../brand/DistrodLogo";
 import { useUiStore } from "../../store/uiStore";
 import type { Page } from "../../types";
 
@@ -52,18 +53,7 @@ export function Sidebar() {
         justifyContent: sidebarCollapsed ? "center" : "flex-start",
         flexShrink: 0,
       }}>
-        <div style={{
-          width: 26, height: 26, borderRadius: 7,
-          background: "linear-gradient(135deg, var(--accent) 0%, var(--accent-text) 100%)",
-          display: "flex", alignItems: "center", justifyContent: "center",
-          flexShrink: 0, boxShadow: "0 0 14px var(--accent-glow)",
-        }}>
-          <svg width="14" height="14" viewBox="0 0 18 18" fill="none">
-            <circle cx="9" cy="6.5" r="3.8" fill="white" fillOpacity="0.95" />
-            <ellipse cx="9" cy="14" rx="5.5" ry="2.3" fill="white" fillOpacity="0.70" />
-            <rect x="7.2" y="10.5" width="3.6" height="2" rx="1" fill="white" fillOpacity="0.90" />
-          </svg>
-        </div>
+        <DistrodLogo size={26} />
 
         {!sidebarCollapsed && (
           <div style={{ overflow: "hidden", flex: 1 }}>

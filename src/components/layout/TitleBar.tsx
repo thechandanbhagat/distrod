@@ -2,6 +2,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { invoke } from "@tauri-apps/api/core";
 import { Minus, Square, X, Maximize2, ChevronDown, Server } from "lucide-react";
+import { DistrodLogo } from "../brand/DistrodLogo";
 import { useUiStore } from "../../store/uiStore";
 import { useDistroStore } from "../../store/distroStore";
 
@@ -61,19 +62,7 @@ export function TitleBar() {
         data-tauri-drag-region
         style={{ cursor: "default" }}
       >
-        <div
-          className="flex items-center justify-center rounded shrink-0"
-          style={{
-            width: 18, height: 18,
-            background: "linear-gradient(135deg, var(--accent) 0%, var(--accent-text) 100%)",
-          }}
-        >
-          <svg width="11" height="11" viewBox="0 0 18 18" fill="none">
-            <circle cx="9" cy="6.5" r="3.8" fill="white" fillOpacity="0.92" />
-            <ellipse cx="9" cy="14" rx="5.5" ry="2.3" fill="white" fillOpacity="0.65" />
-            <rect x="7.2" y="10.5" width="3.6" height="2" rx="1" fill="white" fillOpacity="0.88" />
-          </svg>
-        </div>
+        <DistrodLogo size={18} />
 
         <span style={{ fontSize: 11, fontWeight: 600, color: "var(--text-3)", letterSpacing: "0.02em" }}>
           distrod
