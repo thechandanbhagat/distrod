@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="distrod-logo-title">
+  <!-- @group Logo : Distrod app mark -->
+  <title id="distrod-logo-title">distrod logo</title>
+  <defs>
+    <linearGradient id="distrod-bg" x1="86" y1="53" x2="430" y2="452" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0e1430"/>
+      <stop offset="0.48" stop-color="#070a16"/>
+      <stop offset="1" stop-color="#03050b"/>
+    </linearGradient>
+    <radialGradient id="distrod-violet-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(172 136) rotate(48) scale(296)">
+      <stop stop-color="#7c5cfc" stop-opacity="0.55"/>
+      <stop offset="0.58" stop-color="#7c5cfc" stop-opacity="0.09"/>
+      <stop offset="1" stop-color="#7c5cfc" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="distrod-cyan-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(374 354) rotate(-139) scale(246)">
+      <stop stop-color="#22d3ee" stop-opacity="0.32"/>
+      <stop offset="0.65" stop-color="#22d3ee" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="distrod-shell" x1="132" y1="132" x2="408" y2="388" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#a78bfa"/>
+      <stop offset="0.47" stop-color="#7c5cfc"/>
+      <stop offset="0.79" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#10b981"/>
+    </linearGradient>
+    <linearGradient id="distrod-card" x1="194" y1="187" x2="329" y2="322" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#151a36"/>
+      <stop offset="1" stop-color="#0a0d18"/>
+    </linearGradient>
+    <filter id="distrod-shadow" x="64" y="70" width="386" height="392" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#000000" flood-opacity="0.42"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="16" flood-color="#7c5cfc" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#distrod-bg)"/>
+  <rect width="512" height="512" rx="112" fill="url(#distrod-violet-glow)"/>
+  <rect width="512" height="512" rx="112" fill="url(#distrod-cyan-glow)"/>
+  <path d="M132 99h248c18 0 33 15 33 33v248c0 18-15 33-33 33H132c-18 0-33-15-33-33V132c0-18 15-33 33-33Z" fill="none" stroke="#ffffff" stroke-opacity="0.055" stroke-width="2"/>
+  <g filter="url(#distrod-shadow)">
+    <path d="M156 138v236" fill="none" stroke="url(#distrod-shell)" stroke-linecap="round" stroke-width="50"/>
+    <path d="M156 138h91c94 0 162 47 162 118s-68 118-162 118h-91" fill="none" stroke="url(#distrod-shell)" stroke-linecap="round" stroke-linejoin="round" stroke-width="50"/>
+  </g>
+  <g>
+    <rect x="201" y="183" width="146" height="44" rx="15" fill="url(#distrod-card)" stroke="#ffffff" stroke-opacity="0.13"/>
+    <rect x="201" y="234" width="146" height="44" rx="15" fill="url(#distrod-card)" stroke="#ffffff" stroke-opacity="0.13"/>
+    <rect x="201" y="285" width="146" height="44" rx="15" fill="url(#distrod-card)" stroke="#ffffff" stroke-opacity="0.13"/>
+    <circle cx="226" cy="205" r="5" fill="#10b981"/>
+    <circle cx="226" cy="256" r="5" fill="#22d3ee"/>
+    <circle cx="226" cy="307" r="5" fill="#a78bfa"/>
+    <path d="m252 246 18 10-18 10" fill="none" stroke="#dde4f0" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+    <path d="M287 268h31" fill="none" stroke="#dde4f0" stroke-linecap="round" stroke-width="8"/>
+    <path d="M252 205h62" stroke="#7f8ea8" stroke-linecap="round" stroke-opacity="0.78" stroke-width="7"/>
+    <path d="M252 307h62" stroke="#7f8ea8" stroke-linecap="round" stroke-opacity="0.78" stroke-width="7"/>
+  </g>
+  <path d="M367 174h24c12 0 22 10 22 22v25" fill="none" stroke="#22d3ee" stroke-linecap="round" stroke-opacity="0.34" stroke-width="6"/>
+  <path d="M145 338h-24c-12 0-22-10-22-22v-25" fill="none" stroke="#10b981" stroke-linecap="round" stroke-opacity="0.28" stroke-width="6"/>
+</svg>
