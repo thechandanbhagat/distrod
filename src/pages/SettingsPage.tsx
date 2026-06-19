@@ -112,7 +112,7 @@ export function SettingsPage() {
         {/* About */}
         <Section title="About distrod">
           <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-            <AboutRow label="Version" value="0.1.0" />
+            <AboutRow label="Version" value="0.1.1" />
             <AboutRow label="Stack" value="Tauri v2 · Rust · React · TypeScript" />
             <AboutRow label="License" value="MIT" accent />
           </div>

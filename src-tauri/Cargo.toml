@@ -1,6 +1,6 @@
 [package]
 name = "distrod"
-version = "0.1.0"
+version = "0.1.1"
 description = "WSL Dashboard — visual manager for Windows Subsystem for Linux"
 authors = ["Chandan Bhagat"]
 edition = "2021"
